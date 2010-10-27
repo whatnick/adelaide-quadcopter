@@ -1,0 +1,1229 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+PointLight {
+	intensity	1
+	location	10 70 0
+}
+DEF FRONT_VIEW Viewpoint {
+	orientation	-0.723669 -0.687402 -0.0615045  0.44883
+	position	-31.4488 67.0646 91.4542
+	description	"FRONT"
+}
+DEF ABOVE_VIEW Viewpoint {
+	orientation	-0.969802 -0.239223 -0.0474928  0.897845
+	position	-22.0431 154.595 101.817
+	description	"ABOVE"
+}
+DEF BELOW_VIEW Viewpoint {
+	orientation	0.851595 -0.524151 -0.00716312  0.487901
+	position	-24.9728 -31.7457 117.404
+	description	"BELOW"
+}
+Background {
+	groundAngle	[ 0.9, 1.5, 1.57 ]
+	groundColor	[ 0 0.8 0,
+			  0.174249 0.82 0.187362,
+			  0.467223 0.82 0.445801,
+			  0.621997 0.67 0.600279 ]
+	skyAngle	[ 0.1, 1.2, 1.57 ]
+	skyColor	[ 0.76238 0.8 0.1427,
+			  0.277798 0.219779 0.7,
+			  0.222549 0.390234 0.7,
+			  0.60094 0.662637 0.69 ]
+}
+DEF Base Transform {
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+			    }
+
+		    }
+
+		    geometry	Box {
+			    size	15 0.5 15
+		    }
+
+	    }
+
+	    Transform {
+		    translation	4 5 4
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	10
+				    radius	0.5
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	4 5 -4
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	10
+				    radius	0.5
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	-4 5 -4
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	10
+				    radius	0.5
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	-4 5 4
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	10
+				    radius	0.5
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	-2 15 2
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	10
+				    radius	0.5
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	-2 15 -2
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	10
+				    radius	0.5
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	2 15 -2
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	10
+				    radius	0.5
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	2 15 2
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	10
+				    radius	0.5
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0 10 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	10 0.5 10
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0 20 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	6 0.5 6
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0 1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    radius	2.5
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0 9 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	18
+				    radius	1.5
+			    }
+
+		    }
+	    }
+
+	    DEF YAW Transform {
+		    translation	0 12 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	24
+					radius	0.75
+				}
+
+			}
+
+			Transform {
+				translation	0 12 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Box {
+						size	3 3 3
+					}
+
+				}
+			}
+
+			Transform {
+				translation	0 13.8 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Box {
+						size	10 0.8 3
+					}
+
+				}
+			}
+
+			Transform {
+				translation	4.6 18.8 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Box {
+						size	0.8 10 3
+					}
+
+				}
+			}
+
+			Transform {
+				translation	-4.6 18.8 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Box {
+						size	0.8 10 3
+					}
+
+				}
+			}
+
+			Transform {
+				translation	5.5 22.5 0
+				rotation	0 0 1  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	1
+						radius	2
+					}
+
+				}
+			}
+
+			DEF PITCH Transform {
+				translation	0 22.5 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Sphere {
+						    radius	0.1
+					    }
+
+				    }
+
+				    DEF transform Transform {
+					    translation	0 0 0
+					    rotation	0 0 1  1.5708
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	10
+								radius	0.5
+							}
+
+						}
+
+						Transform {
+							children Shape {
+								appearance	Appearance {
+									material	Material {
+									}
+
+								}
+
+								geometry	Box {
+									size	2 4 6
+								}
+
+							}
+						}
+
+						Transform {
+							translation	0 0 -3.5
+							rotation	1 0 0  1.5708
+							children Shape {
+								appearance	Appearance {
+									material	Material {
+									}
+
+								}
+
+								geometry	Cylinder {
+									height	1
+									radius	2
+								}
+
+							}
+						}
+					    ]
+				    }
+
+				    DEF ROLL Transform {
+					    translation	0 0 0
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+								}
+
+							}
+
+							geometry	Sphere {
+								radius	0.1
+							}
+
+						}
+
+						DEF transform Transform {
+							translation	0 0 0
+							rotation	1 0 0  1.5708
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	28
+									    radius	0.5
+								    }
+
+							    }
+
+							    Transform {
+								    translation	0 0 0
+								    scale	6 6 1
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+										    }
+
+									    }
+
+									    geometry	Extrusion {
+										    beginCap	TRUE
+										    endCap	TRUE
+										    ccw	TRUE
+										    convex	TRUE
+										    creaseAngle	0
+										    solid	TRUE
+										    crossSection	[ -3.46493 0.420997,
+												      -3.46493 -0.397865,
+												      -2.93228 -0.397865,
+												      -2.93228 0.420997,
+												      -3.46493 0.420997 ]
+										    orientation	[ 0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0 ]
+										    scale	[ 1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1 ]
+										    spine	[ 1 -2.44921e-016 0,
+												      0.932472 -0.361242 0,
+												      0.739009 -0.673696 0,
+												      0.445738 -0.895164 0,
+												      0.0922675 -0.995734 0,
+												      -0.273664 -0.961825 0,
+												      -0.602635 -0.798017 0,
+												      -0.850218 -0.526432 0,
+												      -0.982973 -0.183749 0,
+												      -0.982973 0.18375 0,
+												      -0.850217 0.526433 0,
+												      -0.602634 0.798018 0,
+												      -0.273663 0.961826 0,
+												      0.0922688 0.995734 0,
+												      0.445739 0.895163 0,
+												      0.739009 0.673695 0,
+												      0.932472 0.361241 0,
+												      1 -2.44921e-016 0 ]
+									    }
+
+								    }
+							    }
+
+							    Transform {
+								    translation	0 0 6
+								    scale	7.7 7.7 1
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+										    }
+
+									    }
+
+									    geometry	Extrusion {
+										    beginCap	TRUE
+										    endCap	TRUE
+										    ccw	TRUE
+										    convex	TRUE
+										    creaseAngle	0
+										    solid	TRUE
+										    crossSection	[ -3.51782 0.483199,
+												      -3.51782 -0.423114,
+												      -2.96926 -0.423114,
+												      -2.96926 0.483199,
+												      -3.51782 0.483199 ]
+										    orientation	[ 0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0,
+												      0 0 1  0 ]
+										    scale	[ 1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1,
+												      1 1 ]
+										    spine	[ 1 -2.44921e-016 0,
+												      0.932472 -0.361242 0,
+												      0.739009 -0.673696 0,
+												      0.445738 -0.895164 0,
+												      0.0922675 -0.995734 0,
+												      -0.273664 -0.961825 0,
+												      -0.602635 -0.798017 0,
+												      -0.850218 -0.526432 0,
+												      -0.982973 -0.183749 0,
+												      -0.982973 0.18375 0,
+												      -0.850217 0.526433 0,
+												      -0.602634 0.798018 0,
+												      -0.273663 0.961826 0,
+												      0.0922688 0.995734 0,
+												      0.445739 0.895163 0,
+												      0.739009 0.673695 0,
+												      0.932472 0.361241 0,
+												      1 -2.44921e-016 0 ]
+									    }
+
+								    }
+							    }
+							]
+						}
+
+						DEF LEFT Transform {
+							translation	17 1 0
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    ambientIntensity	0.2
+										    diffuseColor	0.354348 0.631483 0.94
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    radius	10
+								    }
+
+							    }
+
+							    Transform {
+								    translation	0 -4 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	6
+										    radius	2
+									    }
+
+								    }
+							    }
+
+							    DEF LEFT_PROP Transform {
+								    translation	0 0.1 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												ambientIntensity	0.2
+												diffuseColor	1 1 1
+											}
+
+										}
+
+										geometry	Cylinder {
+										}
+
+									}
+
+									Transform {
+										translation	0 0 -4
+										scale	1 1 1.3
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													ambientIntensity	0.2
+													diffuseColor	1 1 1
+												}
+
+											}
+
+											geometry	Extrusion {
+												beginCap	TRUE
+												endCap	TRUE
+												ccw	FALSE
+												convex	TRUE
+												creaseAngle	0
+												solid	TRUE
+												crossSection	[ 0.0268316 3.09906,
+														  -1.18059 -3.01856,
+														  1.20742 -3.01856,
+														  0.0268316 3.09906 ]
+												orientation	[ 0 0 1  0,
+														  0 0 1  0 ]
+												scale	[ 1 1,
+														  1 1 ]
+												spine	[ 0 0 0,
+														  0 1 0 ]
+											}
+
+										}
+									}
+
+									Transform {
+										translation	0 0 4
+										rotation	0 1 0  3.14159
+										scale	1 1 1.3
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													ambientIntensity	0.2
+													diffuseColor	1 1 1
+												}
+
+											}
+
+											geometry	Extrusion {
+												beginCap	TRUE
+												endCap	TRUE
+												ccw	FALSE
+												convex	TRUE
+												creaseAngle	0
+												solid	TRUE
+												crossSection	[ 0.0268316 3.09906,
+														  -1.18059 -3.01856,
+														  1.20742 -3.01856,
+														  0.0268316 3.09906 ]
+												orientation	[ 0 0 1  0,
+														  0 0 1  0 ]
+												scale	[ 1 1,
+														  1 1 ]
+												spine	[ 0 0 0,
+														  0 1 0 ]
+											}
+
+										}
+									}
+								    ]
+							    }
+
+							    Transform {
+								    translation	-5 1.2 -2.6
+								    rotation	-1 0 0  1.5708
+								    scale	5 5 1
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    ambientIntensity	0.2
+											    diffuseColor	0 0 0
+										    }
+
+									    }
+
+									    geometry	Text {
+										    string	"LEFT"
+									    }
+
+								    }
+							    }
+							]
+						}
+
+						DEF FRONT Transform {
+							translation	0 1 17
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    ambientIntensity	0.2
+										    diffuseColor	0.354348 0.631483 0.94
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    radius	10
+								    }
+
+							    }
+
+							    Transform {
+								    translation	0 -4 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	6
+										    radius	2
+									    }
+
+								    }
+							    }
+
+							    DEF FRONT_PROP Transform {
+								    translation	0 0.1 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												ambientIntensity	0.2
+												diffuseColor	1 1 1
+											}
+
+										}
+
+										geometry	Cylinder {
+										}
+
+									}
+
+									Transform {
+										translation	0 0 -4
+										scale	1 1 1.3
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													ambientIntensity	0.2
+													diffuseColor	1 1 1
+												}
+
+											}
+
+											geometry	Extrusion {
+												beginCap	TRUE
+												endCap	TRUE
+												ccw	FALSE
+												convex	TRUE
+												creaseAngle	0
+												solid	TRUE
+												crossSection	[ 0.0268316 3.09906,
+														  -1.18059 -3.01856,
+														  1.20742 -3.01856,
+														  0.0268316 3.09906 ]
+												orientation	[ 0 0 1  0,
+														  0 0 1  0 ]
+												scale	[ 1 1,
+														  1 1 ]
+												spine	[ 0 0 0,
+														  0 1 0 ]
+											}
+
+										}
+									}
+
+									Transform {
+										translation	0 0 4
+										rotation	0 1 0  3.14159
+										scale	1 1 1.3
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													ambientIntensity	0.2
+													diffuseColor	1 1 1
+												}
+
+											}
+
+											geometry	Extrusion {
+												beginCap	TRUE
+												endCap	TRUE
+												ccw	FALSE
+												convex	TRUE
+												creaseAngle	0
+												solid	TRUE
+												crossSection	[ 0.0268316 3.09906,
+														  -1.18059 -3.01856,
+														  1.20742 -3.01856,
+														  0.0268316 3.09906 ]
+												orientation	[ 0 0 1  0,
+														  0 0 1  0 ]
+												scale	[ 1 1,
+														  1 1 ]
+												spine	[ 0 0 0,
+														  0 1 0 ]
+											}
+
+										}
+									}
+								    ]
+							    }
+
+							    Transform {
+								    translation	-7 1.2 -2.6
+								    rotation	-1 0 0  1.5708
+								    scale	5 5 1
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    ambientIntensity	0.2
+											    diffuseColor	0 0 0
+										    }
+
+									    }
+
+									    geometry	Text {
+										    string	"FRONT"
+									    }
+
+								    }
+							    }
+							]
+						}
+
+						DEF BACK Transform {
+							translation	0 1 -17
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    ambientIntensity	0.2
+										    diffuseColor	0.354348 0.631483 0.94
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    radius	10
+								    }
+
+							    }
+
+							    Transform {
+								    translation	0 -4 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	6
+										    radius	2
+									    }
+
+								    }
+							    }
+
+							    DEF BACK_PROP Transform {
+								    translation	0 0.1 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												ambientIntensity	0.2
+												diffuseColor	1 1 1
+											}
+
+										}
+
+										geometry	Cylinder {
+										}
+
+									}
+
+									Transform {
+										translation	0 0 -4
+										scale	1 1 1.3
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													ambientIntensity	0.2
+													diffuseColor	1 1 1
+												}
+
+											}
+
+											geometry	Extrusion {
+												beginCap	TRUE
+												endCap	TRUE
+												ccw	FALSE
+												convex	TRUE
+												creaseAngle	0
+												solid	TRUE
+												crossSection	[ 0.0268316 3.09906,
+														  -1.18059 -3.01856,
+														  1.20742 -3.01856,
+														  0.0268316 3.09906 ]
+												orientation	[ 0 0 1  0,
+														  0 0 1  0 ]
+												scale	[ 1 1,
+														  1 1 ]
+												spine	[ 0 0 0,
+														  0 1 0 ]
+											}
+
+										}
+									}
+
+									Transform {
+										translation	0 0 4
+										rotation	0 1 0  3.14159
+										scale	1 1 1.3
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													ambientIntensity	0.2
+													diffuseColor	1 1 1
+												}
+
+											}
+
+											geometry	Extrusion {
+												beginCap	TRUE
+												endCap	TRUE
+												ccw	FALSE
+												convex	TRUE
+												creaseAngle	0
+												solid	TRUE
+												crossSection	[ 0.0268316 3.09906,
+														  -1.18059 -3.01856,
+														  1.20742 -3.01856,
+														  0.0268316 3.09906 ]
+												orientation	[ 0 0 1  0,
+														  0 0 1  0 ]
+												scale	[ 1 1,
+														  1 1 ]
+												spine	[ 0 0 0,
+														  0 1 0 ]
+											}
+
+										}
+									}
+								    ]
+							    }
+
+							    Transform {
+								    translation	-5.6 1.2 -2.6
+								    rotation	-1 0 0  1.5708
+								    scale	5 5 1
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    ambientIntensity	0.2
+											    diffuseColor	0 0 0
+										    }
+
+									    }
+
+									    geometry	Text {
+										    string	"BACK"
+									    }
+
+								    }
+							    }
+							]
+						}
+
+						DEF RIGHT Transform {
+							translation	-17 1 0
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    ambientIntensity	0.2
+										    diffuseColor	0.354348 0.631483 0.94
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    radius	10
+								    }
+
+							    }
+
+							    Transform {
+								    translation	0 -4 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	6
+										    radius	2
+									    }
+
+								    }
+							    }
+
+							    DEF RIGHT_PROP Transform {
+								    translation	0 0.1 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												ambientIntensity	0.2
+												diffuseColor	1 1 1
+											}
+
+										}
+
+										geometry	Cylinder {
+										}
+
+									}
+
+									Transform {
+										translation	0 0 -4
+										scale	1 1 1.3
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													ambientIntensity	0.2
+													diffuseColor	1 1 1
+												}
+
+											}
+
+											geometry	Extrusion {
+												beginCap	TRUE
+												endCap	TRUE
+												ccw	FALSE
+												convex	TRUE
+												creaseAngle	0
+												solid	TRUE
+												crossSection	[ 0.0268316 3.09906,
+														  -1.18059 -3.01856,
+														  1.20742 -3.01856,
+														  0.0268316 3.09906 ]
+												orientation	[ 0 0 1  0,
+														  0 0 1  0 ]
+												scale	[ 1 1,
+														  1 1 ]
+												spine	[ 0 0 0,
+														  0 1 0 ]
+											}
+
+										}
+									}
+
+									Transform {
+										translation	0 0 4
+										rotation	0 1 0  3.14159
+										scale	1 1 1.3
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													ambientIntensity	0.2
+													diffuseColor	1 1 1
+												}
+
+											}
+
+											geometry	Extrusion {
+												beginCap	TRUE
+												endCap	TRUE
+												ccw	FALSE
+												convex	TRUE
+												creaseAngle	0
+												solid	TRUE
+												crossSection	[ 0.0268316 3.09906,
+														  -1.18059 -3.01856,
+														  1.20742 -3.01856,
+														  0.0268316 3.09906 ]
+												orientation	[ 0 0 1  0,
+														  0 0 1  0 ]
+												scale	[ 1 1,
+														  1 1 ]
+												spine	[ 0 0 0,
+														  0 1 0 ]
+											}
+
+										}
+									}
+								    ]
+							    }
+
+							    Transform {
+								    translation	-6.4 1.2 -2.6
+								    rotation	-1 0 0  1.5708
+								    scale	5 5 1
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    ambientIntensity	0.2
+											    diffuseColor	0 0 0
+										    }
+
+									    }
+
+									    geometry	Text {
+										    string	"RIGHT"
+									    }
+
+								    }
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF AUTHOR Transform {
+		    translation	-6.8 0.3 6
+		    rotation	-1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Text {
+				    string	[ "Rohin Wood",
+						      "The University of Adelaide 2005" ]
+				    length	0
+				    maxExtent	0
+			    }
+
+		    }
+	    }
+	]
+}
