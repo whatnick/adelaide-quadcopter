@@ -11,7 +11,7 @@ import serial
 import struct
 import time
 from numpy import array
-from pylab import plot,show,figure
+from pylab import *
 #from motor_driver import motor_driver
 
 class imu:
@@ -90,39 +90,73 @@ if __name__=='__main__':
     v_list = list()
     a_list = list()
     m_list = list()
-    
+    pid_list=list()
+    angle_list=list ()
+    derivative_list=list()
+    Magan=list()
+    k1=2
+    k2=1
+    #k2=0.8
+    prev_value=0
+    #Ki=18
+    Ki=16
     mdrv = motor_driver(14,"abs")
-    time.sleep(5)
-
-
+    #time.sleep(3)
+    run_time = 1500
+    th = 95
     
     mdrv.stop()
-    mdrv.setSpeed(3,40)
-    time.sleep(1)
-    ph=20
-    for i in range(40):
-        #imu_data = imu_reader.readimu()
-        #rpy_list.append(imu_data)
-        #value=imu_data[4]
+    mdrv.setSpeed(1,0)
+    mdrv.setSpeed(3,0)
+    time.sleep(3)
+    mdrv.setSpeed(1,0)
+    mdrv.setSpeed(3,0)
+    time.sleep(3)
+    for i in range(run_time):
+        imu_data = imu_reader.readimu()
+        rpy_list.append(imu_data)
+        angle_rate=imu_data[4]        
+        value=imu_data[6]
+        Mag=imu_data[6]               
         #print imu_data
         #small test about sensor
-        #t_list.append(time.time())
-        #print value
-        #a_list.append(value)
-        
-       # if (i == 100):
-        m_list.append(0.1)
-        mdrv.setSpeed(3,ph)
-        time.sleep(0.5)
-        ph=ph+1
-        print ph
-     #       time.sleep(5)
-     #   else :
-#  m_list.append(0)
+        t_list.append(time.time())
+        print value
+        a_list.append(value)
 
-      #  if (i==300):
-      #      m_list.append(0.2)
-      #      mdrv.setSpeed(1,40)
+        #prop = k1*(-0.05-value)
+        prop = k1*(-0.2-value)
+        #derivative = value-prev_value
+        derivative=angle_rate
+        deriv =  derivative*(1)*k2
+        pid_out = (prop+deriv)*Ki
+
+        prev_value = value
+        pid_list.append(pid_out)
+        derivative_list.append(deriv)
+        angle_list.append(angle_rate)
+        Magan.append(Mag)
+        if (pid_out < 0):
+            mdrv.setSpeed(1,40)
+            pid_out=pid_out*(-1)
+            pid_out=40+pid_out
+            if pid_out>th :
+               pid_out=th
+            mdrv.setSpeed(3,pid_out)
+     #       time.sleep(5)
+            print value
+        else :
+            mdrv.setSpeed(3,40)           
+            m_list.append(0)
+            #pid_out=40+pid_out*1.3
+            pid_out=40+pid_out*1
+            if pid_out>th :
+               pid_out=th
+            mdrv.setSpeed(1,pid_out)
+            print value
+        #if (i==300):
+        #    m_list.append(0.2)
+        #    mdrv.setSpeed(1,37)
         #if (i== 500):
         #    m_list.append(0.2)
         #    mdrv.setSpeed(3,75)
@@ -149,31 +183,47 @@ if __name__=='__main__':
     #figure(33)
     #plot(a_list)
     #plot(m_list)
-    log_file = open("data_50.txt","w")
+    log_file = open("data_90.txt","w")
     r_array = array(rpy_list)
     for line in rpy_list:
         log_file.write(str(line)+"\n")
+    mdrv.stop()
+    figure(1)
+    subplot(311)
+    plot(pid_list)
+    ylabel("Pid Voltage")
+    subplot(312)
+    plot(derivative_list)
+    ylabel("Derivative")
+    #subplot(223)
+    #plot(angle_list)
+    #ylabel("Angular Rate")
+    subplot(313)
+    plot(Magan)
+    ylabel("Angle Magnitude")
 
+     
     #mdrv.stop()
-    #mdrv.serialport.close()
-    #imu_reader.serialport.close()
-    
+    mdrv.serialport.close()
+    imu_reader.serialport.close()
+        
     log_file.flush()
     log_file.close()
     #print rpy_list
     #print t_list
-    
-    #figure(1)
-    #plot(r_array[:,9],r_array[:,0:3])
-    #figure(2)
-    #plot(r_array[:,9],r_array[:,3:6])
-    #figure(3)
-    #plot(r_array[:,9],r_array[:,6:9])
-    #show()
-    
+
+    """
+    figure(1)
+    plot(r_array[:,9],r_array[:,0:3])
+    figure(2)
+    plot(r_array[:,9],r_array[:,3:6])
+    figure(3)
+    plot(r_array[:,9],r_array[:,6:9])
     mdrv.stop()
     mdrv.serialport.close()
     imu_reader.serialport.close()
+    show()
+    """
+    #exit()
     
-#    show()
     
